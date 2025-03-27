@@ -1,16 +1,12 @@
-/* 
-    Uppg3:
-    1) Läs in en sträng från tangentbordet (max 20 tecken)
-    2) ta fram hur många tecken strängen innehåller (bortsett från '\0')
-    3) Skriv ut antalet tecken (bara siffror, ingen övrig text)
-*/
-
 #include <stdio.h>
 #include <string.h>
 
-int main(){
+int main() {
+    char str[21]; // max 20 tecken + '\0'
+    scanf("%20s", str);
 
-    // Skriv din kod här i main
+    int length = strlen(str);
+    printf("%d", length);
 
     return 0;
 }
