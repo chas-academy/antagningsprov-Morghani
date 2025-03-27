@@ -1,15 +1,13 @@
-/* 
-    Uppg2:
-    1) Läs in tre heltal från tangentbordet
-    2) ta fram det största av dem
-    3) Skriv ut det största av dem (bara siffror, ingen övrig text)
-*/
-
 #include <stdio.h>
 
-int main(){
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
 
-    // Skriv din kod här i main
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
 
+    printf("%d", max);
     return 0;
 }
