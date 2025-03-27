@@ -1,17 +1,26 @@
-/* 
-    Uppg6:
-    1) Läs in fem heltal från tangentbordet
-    2) Hitta det NÄST största av de fem talen (förutsätt att de är unika). 
-    3) Skriv ut talet (bara siffror, ingen övrig text).
-    OBS: Du får inte använda math.h i den här uppgiften.
-*/
-
 #include <stdio.h>
 
+int main() {
+    int nums[5];
+    
+    // Läs in 5 tal
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &nums[i]);
+    }
 
-int main(){
+    // Sortera med enkel bubble sort
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4 - i; j++) {
+            if (nums[j] > nums[j + 1]) {
+                int temp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = temp;
+            }
+        }
+    }
 
-    // Skriv din kod här i main
+    // Skriv ut näst största (näst sista i sorterad array)
+    printf("%d", nums[3]);
 
     return 0;
 }
